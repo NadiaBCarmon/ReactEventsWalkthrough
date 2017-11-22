@@ -35,13 +35,10 @@ class App extends React.Component {
   }
 
 
-
-
-
   render() {
 
-    let tasks = this.state.tasks.map((task)=>
-      <Todo task={task} />
+    let tasks = this.state.tasks.map((task, index)=>
+      <Todo key={index} task={task} />
     )
     return (
       <div>

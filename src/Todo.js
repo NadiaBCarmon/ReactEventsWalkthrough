@@ -18,7 +18,35 @@ class Todo extends React.Component{
 
   }
 
+  componentWillReceiveProps(nextProps){
+    console.log('d')
+    if(nextProps != this.props){
+      this.setState({
+        complete: false
+      })
+    }
+  }
 
+  shouldComponentUpdate(nextProps, nextState){
+    console.log('a');
+    return true
+  }
+
+  componentWillUpdate(nextProps, nextState){
+    console.log('b')
+  }
+
+  componentDidUpdate(nextProps, nextState){
+    console.log('c')
+  }
+
+  componentWillMount(){
+    console.log('e')
+  }
+
+  componentDidMount(){
+    console.log('f')
+  }
 
 render(){
   return(
